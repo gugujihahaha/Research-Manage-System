@@ -1,7 +1,6 @@
 """经费收支数据访问"""
 from backend.utils.db import execute_query, execute_insert, execute_update
 
-
 def create_income(data):
     return execute_insert(
         """INSERT INTO expenditure (project_id, type, amount, exp_date, purpose, operator_id, approval_status)
