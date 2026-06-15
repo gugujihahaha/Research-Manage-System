@@ -9,6 +9,7 @@ def create_income(data):
         (data['project_id'], data['amount'], data['exp_date'], data.get('purpose'), data['operator_id']))
 
 
+
 def create_expense(data):
     return execute_insert(
         """INSERT INTO expenditure (project_id, budget_id, type, amount, exp_date, purpose, operator_id, approval_status)
