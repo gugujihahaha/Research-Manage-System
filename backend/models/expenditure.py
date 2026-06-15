@@ -1,4 +1,4 @@
-"""经费收支数据访问"""
+"""经费收支数据访问OK"""
 from backend.utils.db import execute_query, execute_insert, execute_update
 
 def create_income(data):
