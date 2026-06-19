@@ -2,7 +2,7 @@
 from flask import Blueprint, request, session
 from backend.services.project_service import submit_review
 from backend.utils.db import execute_query
-from backend.utils.response import success
+from backend.utils.response import success, fail
 
 reviews_bp = Blueprint('reviews', __name__)
 

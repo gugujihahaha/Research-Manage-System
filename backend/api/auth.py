@@ -82,7 +82,12 @@ def todo_counts():
 
     counts['total'] = sum(counts.values())
     return success(counts)
-    return success(execute_query("SELECT college_id, name FROM college"))
+
+
+@auth_bp.route('/colleges', methods=['GET'])
+def list_colleges():
+    rows = execute_query("SELECT college_id, name FROM college ORDER BY college_id")
+    return success(rows)
 
 
 @auth_bp.route('/logout', methods=['POST'])
